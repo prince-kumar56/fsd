@@ -1,0 +1,75 @@
+/* General page styling */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  background: #f9f9f9;
+  color: #333;
+}
+
+header {
+  background: #ff9900;
+  color: white;
+  text-align: center;
+  padding: 15px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+/* Main grid: 3 parent divs per row */
+.main-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 15px;
+  padding: 20px;
+}
+
+/* Parent box (container of 4 small boxes) */
+.parent {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* 2x2 grid */
+  gap: 10px;
+  border: 2px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background: #fff;
+}
+
+/* Child boxes inside each parent */
+.child {
+  border: 1px solid #999;
+  border-radius: 6px;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  overflow: hidden;
+}
+
+/* Images inside child boxes */
+.child img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* fills box neatly */
+  border-radius: 4px;
+}
+
+/* Big bottom box */
+.big-box {
+  grid-column: span 3;  /* stretch across all columns */
+  border: 2px solid #444;
+  border-radius: 8px;
+  background: #ddd;
+  text-align: center;
+  padding: 40px;
+  font-size: 20px;
+  font-weight: bold;
+}
